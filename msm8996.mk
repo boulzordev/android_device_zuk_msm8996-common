@@ -166,7 +166,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
-    fingerprintd \
     fingerprint.msm8996
 
 # For android_filesystem_config.h
