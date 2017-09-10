@@ -86,6 +86,7 @@ media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
 use.qti.sw.alac.decoder=true
 use.qti.sw.ape.decoder=true
+persist.media.treble_omx=false
 
 # Perf
 ro.am.reschedule_service=true
