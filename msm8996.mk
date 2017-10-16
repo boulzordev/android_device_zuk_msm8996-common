@@ -178,6 +178,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-service-qti \
     libgnss \
     libgnsspps \
+    libshims_get_process_name \
     libcurl
 
 PRODUCT_COPY_FILES += \
