@@ -62,6 +62,7 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=16M@0-0xffffffff
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -209,7 +210,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 TARGET_POWERHAL_VARIANT := qcom
 
 # RIL
-TARGET_RIL_VARIANT := caf
+#TARGET_RIL_VARIANT := caf
 SIM_COUNT := 2
 
 # Recovery
