@@ -372,6 +372,7 @@ on post-fs-data
     mkdir /data/misc/ipa 0700 net_admin net_admin
 
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
+   
 
     # Create the directories used by the Wireless subsystem
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -865,6 +866,13 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
+
+on property:sys.boot_completed=1
+    #load wifi module now so that path for firmware can be created
+    insmod /system/lib/modules/wlan.ko
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
 
 service hostapd /system/bin/hostapd /data/hostapd/hostapd.conf
     class late_start
