@@ -206,7 +206,7 @@ TARGET_POWERHAL_VARIANT := qcom
 
 # RIL
 #TARGET_RIL_VARIANT := caf
-SIM_COUNT := 2
+#SIM_COUNT := 2
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
