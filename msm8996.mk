@@ -177,7 +177,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0 \
+    android.hardware.gnss@1.0-impl \
     gps.msm8996 \
     libshims_get_process_name \
     libcurl \
