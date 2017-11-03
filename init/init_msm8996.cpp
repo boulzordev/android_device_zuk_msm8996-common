@@ -38,8 +38,7 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-namespace android {
-namespace init {
+using android::base::GetProperty;
 
 char const *heapgrowthlimit;
 char const *heapsize;
@@ -54,7 +53,7 @@ static void init_alarm_boot_properties()
     char const *power_off_alarm_file = "/persist/alarm/powerOffAlarmSet";
     std::string boot_reason;
     std::string power_off_alarm;
-    std::string reboot_reason = android::base::GetProperty("ro.boot.alarmboot", "");
+    std::string reboot_reason = GetProperty("ro.boot.alarmboot", "");
 
     if (read_file(boot_reason_file, &boot_reason)
             && read_file(power_off_alarm_file, &power_off_alarm)) {
@@ -107,7 +106,7 @@ void vendor_load_properties()
 {
     std::string platform;
 
-    platform = android::base::GetProperty("ro.board.platform", "");
+    platform = GetProperty("ro.board.platform", "");
     if (platform != ANDROID_TARGET)
         return;
 
@@ -121,7 +120,4 @@ void vendor_load_properties()
     property_set("dalvik.vm.heapmaxfree", heapmaxfree);
 
     init_alarm_boot_properties();
-}
-
-}
 }
