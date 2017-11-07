@@ -134,7 +134,9 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     libshim_camera \
     camera.msm8996 \
-    Snap
+    Snap \
+    org.codeaurora.camera \
+    org.codeaurora.camera.xml
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
